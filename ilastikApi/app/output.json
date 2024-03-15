@@ -1,0 +1,156 @@
+[
+    {
+        "name": "System & Chassis",
+        "status": "Tbl",
+        "comment": "",
+        "path": "System & Chassis",
+        "children": [
+            {
+                "name": "Software",
+                "status": "Y",
+                "comment": "",
+                "path": "System & Chassis->Software",
+                "children": [
+                    {
+                        "name": "Base OS",
+                        "status": "Y",
+                        "comment": "",
+                        "path": "System & Chassis->Software->Base OS",
+                        "children": [
+                            {
+                                "name": "Junos 32 Bit",
+                                "status": "N",
+                                "comment": "",
+                                "path": "System & Chassis->Software->Base OS->Junos 32 Bit",
+                                "children": []
+                            },
+                            {
+                                "name": "Junos 64 Bit",
+                                "status": "Y",
+                                "comment": "",
+                                "path": "System & Chassis->Software->Base OS->Junos 64 Bit",
+                                "children": []
+                            },
+                            {
+                                "name": "Junos PPC",
+                                "status": "N",
+                                "comment": "",
+                                "path": "System & Chassis->Software->Base OS->Junos PPC",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "VMHOST based Junos OS",
+                        "status": "N",
+                        "comment": "with NG-RE",
+                        "path": "System & Chassis->Software->VMHOST based Junos OS",
+                        "children": []
+                    },
+                    {
+                        "name": "Processes",
+                        "status": "N",
+                        "comment": "",
+                        "path": "System & Chassis->Software->Processes",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "System Options",
+                "status": "Y",
+                "comment": "",
+                "path": "System & Chassis->System Options",
+                "children": [
+                    {
+                        "name": "Authentication",
+                        "status": "Y",
+                        "comment": "",
+                        "path": "System & Chassis->System Options->Authentication",
+                        "children": [
+                            {
+                                "name": "root-authentication",
+                                "status": "Y",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Authentication->root-authentication",
+                                "children": []
+                            },
+                            {
+                                "name": "radius-server",
+                                "status": "Y",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Authentication->radius-server",
+                                "children": []
+                            },
+                            {
+                                "name": "tacplus-server",
+                                "status": "N",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Authentication->tacplus-server",
+                                "children": []
+                            },
+                            {
+                                "name": "authentication-order",
+                                "status": "Y",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Authentication->authentication-order",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Accounting",
+                        "status": "Y",
+                        "comment": "",
+                        "path": "System & Chassis->System Options->Accounting",
+                        "children": [
+                            {
+                                "name": "events",
+                                "status": "Y",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Accounting->events",
+                                "children": []
+                            },
+                            {
+                                "name": "radius",
+                                "status": "N",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Accounting->radius",
+                                "children": []
+                            },
+                            {
+                                "name": "tacplus",
+                                "status": "Y",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Accounting->tacplus",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Login",
+                        "status": "Y",
+                        "comment": "",
+                        "path": "System & Chassis->System Options->Login",
+                        "children": [
+                            {
+                                "name": "user classes",
+                                "status": "Y",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Login->user classes",
+                                "children": []
+                            },
+                            {
+                                "name": "allow-commands",
+                                "status": "N",
+                                "comment": "",
+                                "path": "System & Chassis->System Options->Login->allow-commands",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
