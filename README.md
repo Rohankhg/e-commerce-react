@@ -87,28 +87,3 @@ The gole is Viv viewer to display every images on frontend by using backend that
     * This is important part in this project. 
 
 *** This project structure is configured as perfectly and as well for image processing and viv viewer.
-### About GCP
-Current(24.10.2022) use GCP for server and link subscription google.
-https://console.cloud.google.com/home/dashboard?project=capable-alcove-265511
-
-To be able to operate on the following sites.
-  - Project Name : LifeAnalytics
-  - Vm instance : Compute Engine / Vm Instances / lifeanalytics-vm
-  - Debian version : 9.2
-  - External IP : 34.72.210.99
-  - account name(ssh key account) : iasgcp (ias-project-react repository)
-  - Reference File : gitaction workflow command - ssh_ci.yml
-  
-  
-### About Web page
- - login page http://ias.lifeanalytics.org/
-
-
-### About some issues in deploying
-
-In special case, some files need to get access to run as admin in ubuntu server.
-(mainApi/ml_lib/segA,segAB,segB files)
-So for successful running, should run the following
-...For example...
-sudo su
-chmod +777 segAB
