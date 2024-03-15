@@ -1,0 +1,2 @@
+$PlateRows=8
+$PlateColumns=12
