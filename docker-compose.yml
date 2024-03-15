@@ -1,0 +1,68 @@
+version: "4.12"
+services:
+    mainapi:
+        build:
+            context: .
+            dockerfile: ./mainApi/Dockerfile
+        ports:
+            - "8000:8000"
+        env_file:
+            - ./env_files/fastApi.env
+            - ./env_files/mongoDB_connect.env
+        depends_on:
+            - mongo
+        volumes:
+            - image-storage:/image-storage
+            - cache-storage:/cache-storage
+            - ./mainApi:/app/mainApi:rw
+            # - ./docker_compose_libs/shared_utils:/app/shared_utils:rw
+            - ./docker_compose_shared/static:/app/shared_static:rw
+        command: [ "sh", "./mainApi/start.sh" ]
+        restart: always
+    ilastikapi:
+        build:
+            context: .
+            dockerfile: ./ilastikApi/Dockerfile
+        ports:
+            - "8001:8001"
+        env_file:
+            - ./env_files/fastApi.env
+        volumes:
+            - image-storage:/image-storage
+            - cache-storage:/cache-storage
+            - ./ilastikApi:/app/ilastikApi:rw
+            - ./docker_compose_shared/static:/app/shared_static:rw
+        command: [ "sh", "./ilastikApi/start.sh" ]
+        restart: always   
+    # nginx:
+    #   depends_on: 
+    #       - mainApi
+    #   container_name: proxy-app
+    #   build: 
+    #       context: ./react/
+    #       dockerfile: Dockerfile
+    #   ports: 
+    #       - "3000:3000"
+    #   restart: always
+    mongo:
+        image: mongo:latest
+        restart: always
+        ports:
+            - "127.0.0.1:27017:27017"
+        volumes:
+            - mongoDbData:/data/db
+        env_file:
+            - ./env_files/mongoDb.env
+    mongo-express:
+        image: mongo-express
+        restart: always
+        ports:
+            - "8081:8081"
+        env_file:
+            - ./env_files/mongo-express.env
+        depends_on:
+            - mongo
+volumes:
+    mongoDbData:
+    image-storage:
+    cache-storage:
